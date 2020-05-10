@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="../static/a2.css"/>
+    <style>
+        #flash {
+            text-align: center;
+            size: 100px;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+    </style>
+
+    <body>
+
+    <br>
+
+    <div class="bigtext">
+
+        Software Survival Guide
+
+
+        <div style="text-align:center;">
+            <form action="signup">
+                <input type="submit" class="btn btn-lg btn-secondary" value="Get Started">
+            </form>
+
+
+        </div>
+        <div style="text-align:center; height: 50px">
+            <form action="login">
+                <input type="submit" class="btn btn-lg btn-secondary" value="Login">
+            </form>
+
+        </div>
+        <div style="text-align:center; height: 50px">
+            <form action="logout">
+                <input type="submit" class="btn btn-lg btn-secondary" value="Logout">
+            </form>
+        </div>
+
+    </div>
+    <div style="text-align:center; position: absolute">
+        <form action="passreset">
+            <input type="submit" class="btn btn-small btn-secondary" value="Password Reset">
+        </form>
+    </div>
+    </div>
+
+    <div style="text-align: center;">
+        <form action="table">
+            <input type="submit" class="btn btn-small btn-secondary" value="View our members">
+        </form>
+    </div>
+    <div style="text-align: right;">
+        <form action="clocks">
+            <input type="submit" class="btn btn-small btn-secondary" value="Study clock (leave page)">
+        </form>
+    </div>
+
+
+    </div>
+    <div id="flash">
+        {% for message in get_flashed_messages() %}
+            {{ message }}<br/>
+        {% endfor %}
+    </div>
+
+
+    </body>
+{% endblock %}

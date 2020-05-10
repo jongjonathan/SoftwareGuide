@@ -1,0 +1,27 @@
+
+    .bigtext{
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/100603690261120555/3288949BD5D35B3BCFA9DE0B65FAADE54BBD701C/");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+    body{
+        background-color: #F0F0F0;
+    }
+
+   .bigtext{
+    position: absolute;
+    top: 60%;
+    left:50%;
+    -webkit-transform: translateX(-50%)translateY(-50%);
+    -ms-transform: translateX(-50%)translateY(-50%);
+    transform: translateX(-50%)translateY(-50%);
+    background-size: auto;
+    white-space: normal;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font: 10vmax/.85 Open Sans, impact;
+
+}

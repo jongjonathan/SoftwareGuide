@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My webpage</title>
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+
+        .nav-item {
+            color: white;
+        }
+
+        #foot {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+    <a class="navbar-brand" href="https://www.concordia.ca/" target=_blank><img
+            src="https://chrynews.files.wordpress.com/2013/01/concordialogo.gif" height=90px alt="background:"/></a>
+
+    <div class="container-fluid">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="home">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="daily">Daily Posts </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="personal">Personal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tips">Tips and Tricks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="survival">Survival Skills</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+    <div id="foot" class="container-fluid bg-light">
+
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            Jonathan Jong
+        </div>
+
+    </div>
+</footer>
+</body>
+
+</html>

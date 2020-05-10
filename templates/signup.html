@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        #sign {
+            text-align: center;
+        }
+    </style>
+    <div id="sign">
+        <h2> Sign up </h2>
+        {% for message in get_flashed_messages() %}
+            {{ message }}<br/>
+        {% endfor %}
+        <form action="{{ url_for ('signup') }}" method="post">
+            {{ form.csrf_token }}
+
+            <p>
+                {{ form.username.label }} <br>
+                {{ form.username }}
+            <ul>
+                {% for error in form.username.errors %}
+                    <li style="color: lightgray;">{{ error }}
+                    </li>
+                {% endfor %}
+            </ul>
+            </p>
+            <p>
+                {{ form.password.label }} <br>
+                {{ form.password }}
+
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+
+{% endblock %}
